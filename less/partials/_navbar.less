@@ -20,6 +20,52 @@
         }
     }
 
+    @media screen and (max-width: @screen-md-max) {
+        &-hamburger {
+            display: flex;
+            align-items: flex-end;
+
+            a {
+                position: relative;
+                margin: 0 15px 24px 0;
+                background: linear-gradient(@nav-burger, @nav-burger) no-repeat;
+                background-size: 100% 2px;
+                background-position: center;
+                width: 22px;
+                height: 16px;
+
+                &:before,
+                &:after {
+                    content: '';
+                    width: 100%;
+                    height: 2px;
+                    background: @nav-burger;
+                    position: absolute;
+                    left: 0;
+                }
+
+                &:before {
+                    top: 0;
+                }
+
+                &:after {
+                    bottom: 0;
+                }
+            }
+        }
+    }
+
+    &-collapse {
+        position: absolute;
+        visibility: hidden;
+
+        @media screen and (min-width: @screen-md) {
+            position: relative;
+            visibility: visible;
+            flex: 1 1 0%;
+        }
+    }
+
     &-nav {
         list-style: none;
         margin: 0;
