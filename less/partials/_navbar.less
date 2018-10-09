@@ -1,0 +1,49 @@
+.navbar {
+    margin: 0;
+    padding: 0;
+    background-color: @nav-bg;
+
+    & > .container {
+        display: flex;
+    }
+
+    &-logo {
+        display: flex;
+        align-items: flex-end;
+        padding: 10px 0 18px;
+        margin-right: 20px;
+
+        a {
+            font-size: 24px;
+            color: @nav-link;
+            text-decoration: none;
+        }
+    }
+
+    &-nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex: 1 1 100%;
+        align-items: flex-end;
+
+        li {
+            display: flex;
+
+            a {
+                padding: 20px 10px;
+                color: @nav-link;
+                text-decoration: none;
+
+                &:hover {
+                    background: @nav-link-hover;
+                }
+            }
+        }
+
+        &--right {
+            justify-content: flex-end;
+        }
+    }
+}

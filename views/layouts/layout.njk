@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=width, initial-scale=1.0">
+        <title>LF - {{ title }}</title>
+        <link rel="stylesheet" href="/css/app.css" />
+    </head>
+    <body>
+        {% include '../partials/navbar.njk' %}
+
+        <div class="container">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </body>
+</html>
